@@ -36,7 +36,7 @@ const showHome = async (req, res) => {
 
 const news = async (req, res) => {
     const data = await Category.find();
-    const newsData = await News.find();
+    const newsData = await News.find().populate('category_id','categoryName');
     res.render("news", {
         news: newsData,
         category: data,
