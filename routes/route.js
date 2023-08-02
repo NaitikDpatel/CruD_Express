@@ -5,7 +5,7 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, '../mongo/public/upload') // The destination folder where the image will be stored
+      cb(null, '../CruD_Express/public/upload') // The destination folder where the image will be stored
     },
     filename: function (req, file, cb) {
       
