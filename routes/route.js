@@ -8,6 +8,7 @@ const storage = multer.diskStorage({
       cb(null, '../mongo/public/upload') // The destination folder where the image will be stored
     },
     filename: function (req, file, cb) {
+      
       cb(null, Date.now() + '-' + file.originalname) // Renaming the file to avoid conflicts
     }
   });
